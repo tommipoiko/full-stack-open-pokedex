@@ -45,7 +45,7 @@ jobs:
     if: ${{ github.event_name == 'push' }}
     needs: simple_deployment_pipeline
     runs-on: ubuntu-20.04
-    name: Version increment
+    name: Increment version
     steps:
       - uses: actions/checkout@v3
         with:
