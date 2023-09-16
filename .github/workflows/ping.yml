@@ -1,0 +1,14 @@
+name: Health Check Pipeline
+
+on:
+  schedule:
+    - cron: '1 * * * *'
+
+jobs:
+  scheduled_health_check:
+    runs-on: ubuntu-20.04
+    steps: 
+      - name: Ping 
+        uses: jtalk/url-health-check-action@v3
+        with: 
+          url: https://wispy-dust-9470.fly.dev/
